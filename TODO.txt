@@ -1,0 +1,14 @@
+Clean up CSS code.
+  Could do with splitting it up into relevant .css files
+
+Change the BtnToggle function so that you define a target target state
+  At the moment the function toggles and that can be unreliable
+
+Finish the tooltip design and functionality
+  Should show costs of clicking a button when you hover over it
+  Might also show inflow/outflow of resources and power usage for the base
+
+Base functionality
+  Power usage needs a looping system behind it so that modules used power
+  If power usage exceeds it maximum it should pick random modules to disable
+  Disabled modules should have an effect on other systems which are to be implemented later on

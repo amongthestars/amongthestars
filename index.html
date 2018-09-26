@@ -1,0 +1,125 @@
+<!-- SPOILERS AHEAD -->
+<head>
+
+  <!--
+    Among The Stars v 0.00
+    ================
+    Yet another text adventure game for your browser
+    Made by Thomas Hollinshead
+    Heavily inspired by A Dark Room (http://adarkroom.doublespeakgames.com/)
+  -->
+
+  <title>Among The Stars</title>
+  <link rel="shortcut icon" href="Assets/Icon.ico">
+
+  <!-- css stylesheets-->
+  <link href="css/Main.css" type="text/css" rel="stylesheet"></link>
+  <link href="css/Tooltip.css" type="text/css" rel="stylesheet"></link>
+
+  <link href="css/DarkTheme.css" type="text/css" rel="stylesheet" title="DarkTheme"
+  onload="document.styleSheets[2].disabled = true"></link>
+
+  <!-- scripts -->
+  <script type="text/javascript" src="js/Notifications.js"></script>
+  <script type="text/javascript" src="js/Menu.js"></script>
+  <script type="text/javascript" src="js/Utilities.js"></script>
+  <script type="text/javascript" src="js/ProgressionManager.js"></script>
+  <script type="text/javascript" src="js/StoryManager.js"></script>
+  <script type="text/javascript" src="js/TransitionMenu.js"></script>
+  <script type="text/javascript" src="js/Resources.js"></script>
+
+  <script type="text/javascript" src="js/Moon.js"></script>
+  <script type="text/javascript" src="js/Base.js"></script>
+
+  <!-- experimental scripts -->
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div id="content">
+
+  	<div style="visibility: inherit" class="page" id="Page_Moon">
+  		<button style="visibility: hidden" class="Btn_Regular" id="Btn_Search" onclick="moon.Search()">Search</button>
+      <button style="visibility: hidden" class="Btn_Regular" id="Btn_CollectDust" onclick="moon.CollectDust()">Collect Dust</button>
+  	</div>
+
+    <div style="visibility: hidden" class="page" id="Page_Base">
+      <button class="Btn_Regular" id="Btn_SetupBase" onclick="base.SetupBase()">Setup Base</button>
+
+      <div style="visibility: hidden" class="BtnGroup" id="Base_Process">
+        <div class="BtnGroupTitle" id="Base_Process_Title">Process</div>
+        <div class="BtnGroupSplit" id="Base_Process_Split"></div>
+        <button class="Btn_Regular" id="Btn_SiftDust" onclick="">
+          "Sift Dust"
+          <div style="visibility: inherit" class="TooltipWrapper"></div>
+        </button>
+        <button class="Btn_Regular" id="Btn_RefineDust" onclick="">Refine Dust</button>
+      </div>
+      <div class="GroupSeperator"></div>
+      <div style="visibility: hidden" class="BtnGroup" id="Base_Build">
+        <div class="BtnGroupTitle" id="Base_Build_Title">Build</div>
+        <div class="BtnGroupSplit" id="Base_Build_Split"></div>
+        <button class="Btn_Regular" id="Btn_BuildCommsStation" onclick="">Comms Station</button>
+      </div>
+
+    </div>
+
+
+    <div style="visibility: hidden" id="TableWrapper">
+      <div style="visibility: inherit" class="table" data-title="Resources" id="Tbl_Resources">
+        <div class="tableSplit"></div>
+
+        <div class="tableItem" id="Dust">
+          <div class="tblKey">Dust</div>
+          <div class="tblValue">0</div>
+        </div>
+
+      </div>
+
+      <div style="visibility: hidden" class="table" data-title="Base" id="Tbl_Base">
+        <div class="tableSplit"></div>
+
+        <div class="tableItem" id="Population">
+          <div class="tblKey">Population</div>
+          <div class="tblValue">0/0</div>
+        </div>
+        <div class="tableItem" id="Power">
+          <div class="tblKey">Power</div>
+          <div class="tblValueY">0/2</div>
+        </div>
+        <div class="tableSplitBlank"></div>
+        <div class="tableBuilding" id="EmergencyOxygen">
+          <div class="tblKey">Emergency Oxygen Recycler</div>
+          <div class="tblValueG">On</div>
+        </div>
+        <div class="tableBuilding" id="EmergencyGenerator">
+          <div class="tblKey">Emergency Solar Generator</div>
+          <div class="tblValueG">On</div>
+        </div>
+        <div class="tableBuilding" id="EmergencyDustProcessor">
+          <div class="tblKey">Emergency Dust Processor</div>
+          <div class="tblValueG">On</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="notifications">
+      <div id="notification-gradient"></div>
+      <div id="notification-overflow"></div>
+    </div>
+
+    <div id="transitionMenu">
+      <span style="visibility: hidden" class="transitionBtnDisabled" id="TBtn_PageMoon" onclick="transitionMenu.Transition('Page_Moon', 'TBtn_PageMoon')">The Moon</span>
+      <span style="visibility: hidden" class="transitionSplit" id="TSplit_Moon->Base">|</span>
+      <span style="visibility: hidden" class="transitionBtn" id="TBtn_PageBase" onclick="transitionMenu.Transition('Page_Base', 'TBtn_PageBase')">An Empty Crater</span>
+    </div>
+
+    <div class="menu">
+    	<span class="menuBtn" id="darkThemeBtn" onclick="menu.DarkTheme()">dark theme</span>
+    </div>
+  </div>
+
+</body>

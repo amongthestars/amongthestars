@@ -1,0 +1,50 @@
+<!-- SPOILERS AHEAD -->
+<head>
+
+  <!--
+    Among The Stars v 0.00
+    ================
+    Yet another text adventure game for your browser
+    Made by Thomas Hollinshead
+    Heavily inspired by A Dark Room (http://adarkroom.doublespeakgames.com/)
+  -->
+
+  <!-- css stylesheet-->
+  <link href="css/Main.css" type="text/css" rel="stylesheet"></link>
+  <link href="css/DarkTheme.css" type="text/css" rel="stylesheet" title="DarkTheme"
+  onload="document.styleSheets[1].disabled = true"></link>
+
+  <!-- scripts -->
+  <script type="text/javascript" src="js/Notifications.js"></script>
+  <script type="text/javascript" src="js/Menu.js"></script>
+  <script type="text/javascript" src="js/Utilities.js"></script>
+
+  <!-- experimental scripts -->
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div id="content">
+		<div style="visibility: visible" class="page" id="Page_1">
+			<button class="Btn_Regular" id="Btn_Test" onclick="console.log('button')">Button</button>
+		</div>
+		<div style="visibility: hidden" class="page" id="testPage">
+			<p>this is the test page</p>
+		</div>
+    </div>
+
+    <div id="notifications">
+      <div id="notification-gradient"></div>
+      <div id="notification-overflow"></div>
+    </div>
+
+    <div class="menu">
+		<span class="menuBtn" id="notificationBtn" onclick="notifications.addNotification('Test Notification')">testNotification</span>
+		<span class="menuBtn" id="testBtn" onclick="menu.transition('Page_1', 'testPage', 'testBtn')">testTransition</span>
+		<span class="menuBtn" id="darkThemeBtn" onclick="menu.DarkTheme()">dark theme</span>
+	</div>
+  </div>
+
+</body>

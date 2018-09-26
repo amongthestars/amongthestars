@@ -1,0 +1,34 @@
+body {
+  background-color: #282823;
+  color: #EEEEEE;
+}
+
+div.table {
+  border-color: #eeeeee;
+}
+
+div.tableSplit {
+  box-shadow: inset 0px -2px 0 #282823, inset 0px -3px 0 #eeeeee
+}
+
+div#notification-gradient {
+  background: linear-gradient( rgba(40, 40, 35, 0) 0%, rgba(40, 40, 35, 1) 100% );
+}
+
+div#notification-overflow {
+  background-color: #282823;
+}
+
+button.Btn_Regular {
+	border-color: #b0b0b0;
+	color: #eeeeee;
+}
+
+button.Btn_Disabled {
+  border-color: #909090;
+  color: #aaaaaa;
+}
+
+div.BtnGroupSplit {
+  box-shadow: inset 0px -4px 0 #282823, inset 0px -6px 0 #eeeeee;
+}

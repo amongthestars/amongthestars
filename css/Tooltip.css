@@ -1,0 +1,9 @@
+div.TooltipWrapper {
+  background: #181813;
+  border: solid black 1px;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  left: 15px;
+  top: 60px;
+}
