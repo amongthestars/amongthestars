@@ -51,9 +51,15 @@
       <div style="visibility: hidden" class="BtnGroup" id="Base_Process">
         <div class="BtnGroupTitle" id="Base_Process_Title">Process</div>
         <div class="BtnGroupSplit" id="Base_Process_Split"></div>
-        <button class="Btn_Regular" id="Btn_SiftDust" onclick="">
+        <button class="Btn_Regular" id="Btn_SiftDust" onclick="" onmouseover="utilities.TooltipToggle('Btn_SiftDust', 'on')" onmouseout="utilities.TooltipToggle('Btn_SiftDust', 'off')">
           "Sift Dust"
-          <div style="visibility: inherit" class="TooltipWrapper"></div>
+          <div style="visibility: hidden" class="TooltipWrapper">
+            <div class="TT_Item" id="Btn_SiftDust_TT0">
+              <div class="TT_Key">Dust</div>
+              <div class="TT_Value">10</div>
+            </div>
+            <div class="TT_End"></div>
+          </div>
         </button>
         <button class="Btn_Regular" id="Btn_RefineDust" onclick="">Refine Dust</button>
       </div>

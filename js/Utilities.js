@@ -53,19 +53,40 @@ setTimeout(function () {
 
 		TableToggle: function(tableId, targetState="either") {
 			tbl = document.getElementById(tableId)
+
 			if (targetState == "on" && tbl.style.visibility == "hidden") { //If target state is on and its currently off
 				tbl.style.visibility = "inherit" //Fade in
 				tbl.animate({opacity: [0, 1]}, 360)
 			} else if (targetState == "off" && tbl.style.visibility == "inherit") { //If target state is off and its currently on
 				tbl.animate({opacity: [1, 0]}, 360) //Fade out
 				setTimeout(function() {tbl.style.visibility = "hidden"}, 320)
-			} else { //Works like a toggle if no target sate is defined
-				if (tbl.style.visbility == "inherit") { //If its visible make it fade out
+			} else if (targetState != "on" && targetState != "off") { //Works like a toggle if no target sate is defined
+				if (tbl.style.visibility == "inherit") { //If its visible make it fade out
 					tbl.animate({opacity: [1, 0]}, 360)
 					setTimeout(function() {tbl.style.visibility = "hidden"}, 320)
-				} else if (tbl.style.visbility == "hidden") { //If its hidden make it fade in
+				} else if (tbl.style.visibility == "hidden") { //If its hidden make it fade in
 					tbl.style.visibility = "inherit"
 					tbl.animate({opacity: [0, 1]}, 360)
+				}
+			}
+		},
+
+		TooltipToggle: function(parentId, targetState="either") {
+			Parent = document.getElementById(parentId)
+			Children = Parent.children
+			for (i = 0; i < Children.length; i++) {
+				if (Children[i].className == "TooltipWrapper") {TT = Children[i]; break}
+			}
+
+			if (targetState == "on" && TT.style.visibility == "hidden") { //If target state is on and its currently off
+				TT.style.visibility = "inherit" //Make visible
+			} else if (targetState == "off" && TT.style.visibility == "inherit") { //If target state is off and its currently on
+				TT.style.visibility = "hidden" //Make hidden
+			} else if (targetState != "on" && targetState != "off")  { //Works like a toggle if no target sate is defined
+				if (TT.style.visibility == "inherit") { //If its visible make it fade out
+					TT.style.visibility = "hidden"
+				} else if (TT.style.visibility == "hidden") { //If its hidden make it fade in
+					TT.style.visibility = "inherit"
 				}
 			}
 		},

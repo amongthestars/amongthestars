@@ -1,7 +1,7 @@
 Clean up CSS code.
   Could do with splitting it up into relevant .css files
 
-Change the BtnToggle function so that you define a target target state
+Change the BtnToggle function so that you define a target state
   At the moment the function toggles and that can be unreliable
 
 Finish the tooltip design and functionality

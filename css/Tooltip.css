@@ -2,8 +2,28 @@ div.TooltipWrapper {
   background: #181813;
   border: solid black 1px;
   width: 100px;
-  height: 30px;
   position: absolute;
   left: 15px;
   top: 60px;
+}
+
+div.TT_Item {
+  width: 90px;
+  height: 15px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+div.TT_Key {
+  position: absolute;
+}
+
+div.TT_Value {
+  position: absolute;
+  right: 5px;
+}
+
+div.TT_End {
+  width: 100px;
+  height: 3px;
 }
